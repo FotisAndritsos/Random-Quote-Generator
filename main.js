@@ -6,15 +6,23 @@ const writer = document.querySelector('.writer');
 const quotes = [
     {
         quot:"life is okay if you have a dorrito",
-        writ:"john doe"
+        writ:"fotis andritsos"
     },
     {
-        quot:"life is not okay if you have a dorrito",
-        writ:"john doe2"
+        quot:"burgers are okay too..",
+        writ:"andritsos fotis"
     },
     {
-        quot:"life is okay if you have not a dorrito",
-        writ:"john doe3"
+        quot:"well we cant compare ice cream though...",
+        writ:"fotis"
+    },
+    {
+        quot:"trust the proccess",
+        writ:"yohan craus"
+    },
+    {
+        quot:"one time you fall,get up ten",
+        writ:"father to son"
     }
 ];
 
@@ -22,9 +30,7 @@ const quotes = [
 btn.addEventListener ("click", changeQuote);
 
 function changeQuote() {
-    for (i=0; i < quotes.length; i++) {
-        quote.textContent = quotes[i].quot;
-        writer.textContent = quotes[i].writ;
-    }
-   
+        ind = Math.floor(Math.random() * quotes.length);
+        quote.textContent = quotes[ind].quot;
+        writer.textContent = quotes[ind].writ;  
 }
